@@ -1,0 +1,21 @@
+{% extends "header.html" %}
+
+{% block body %}
+  <div class="container">
+    <form action="/display/" method="post" id="moviesForm">
+      <fieldset>
+        <div class="form-group ">
+          <label for="example-text-input" class="col-2 col-form-label">Title</label>
+          <div class="col-10">
+            <input class="form-control text-muted" type="text" value="Cars" id="example-text-input">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleTextarea" class="col-2 col-form-label">Plot</label>
+          <textarea class="form-control text-muted" type="text" id="exampleTextarea" rows="3"></textarea>
+        </div>
+      </fieldset>
+      <button type="submit" class="btn btn-primary"  form="moviesForm">Submit</button>
+    </form>
+  </div>
+{% endblock %}

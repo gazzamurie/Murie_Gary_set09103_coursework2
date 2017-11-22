@@ -1,0 +1,39 @@
+{% extends "header.html" %}
+
+{% block body %}
+<div class="container">
+<h1>Movies</h1>
+{% if session.logged_in %}
+  <a href="/upload/" class="btn btn-primary" style="float: right">Upload</a>
+  <div class="card-group">
+    {% for d in data %}
+    <a href="/{% print(d) %}/">
+    <div class="card">
+      <img src="static/images/{% print(data[d]['img_src']) %}" class="card-img-top center-block" style="height:300px; width:200px;" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"> {% print(data[d]['Title']) %}</h4>
+        <p class="card-text">{% print(data[d]['Plot']) %}</p>
+      </div>
+    </div>
+  </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card-group">
+    {% for d in data %}
+    <a href="/{% print(d) %}/">
+    <div class="card">
+      <img class="card-img-top" src="static/images/{% print(data[d]['img_src']) %}"  style="height:300px; width:200px;" alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title"> {% print(data[d]['Title']) %}</h4>
+        <p class="card-text">{% print(data[d]['Plot']) %}</p>
+      </div>
+    </div>
+      </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+
+
+{% endblock %}

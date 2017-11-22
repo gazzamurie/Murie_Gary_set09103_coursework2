@@ -1,0 +1,17 @@
+{
+  "The Graduate": {
+    "Title": "The Graduate",
+    "Plot": "Ben has recently graduated",
+    "img_src": "tgrad.jpg"
+  },
+  "Titanic": {
+    "Title": "Titanic",
+    "Plot": "pectindhdgh",
+    "img_src": "titanic.jpg"
+  },
+  "Cars": {
+  "Title": "Cars",
+  "Plot": "KaChow",
+  "img_src": "Cars_poster.jpg"
+  }
+}
